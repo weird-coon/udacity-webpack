@@ -2,7 +2,7 @@ import { POLARITY } from './helpers';
 import { postData } from './api';
 import { validate } from './validation';
 
-const id = (id) => document.getElementById(id);
+const id = (elmID) => document.getElementById(elmID);
 const analyzeURL = id('url');
 const result = id('response-result');
 const loading = id('loading');
