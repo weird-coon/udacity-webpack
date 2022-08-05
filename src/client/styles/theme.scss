@@ -1,0 +1,238 @@
+/* ==========================================================================
+  #PAGE WRAPPER
+  ========================================================================== */
+.page-wrapper {
+  min-height: 100vh;
+  padding-top: 120px;
+}
+
+/* ==========================================================================
+  #BACKGROUND
+  ========================================================================== */
+.bg-img {
+  background: url('../assets/img/bg.jpg') center center/cover no-repeat;
+}
+
+/* ==========================================================================
+  #WRAPPER
+  ========================================================================== */
+.wrapper {
+  margin: 0 auto;
+
+  &--w680 {
+    max-width: 680px;
+  }
+
+  &--w720 {
+    max-width: 720px;
+  }
+
+  &--w900 {
+    max-width: 900px;
+  }
+}
+
+/* ==========================================================================
+  #BUTTON
+  ========================================================================== */
+.btn-submit {
+  display: block;
+  width: 100%;
+  line-height: 60px;
+  font-family: inherit;
+  background: #6c7ae0;
+  border-radius: 10px;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  transition: all 0.4s ease;
+  border: none;
+
+  &:hover {
+    background: #5866cc;
+  }
+}
+
+/* ==========================================================================
+  #FORM
+  ========================================================================== */
+input,
+textarea {
+  outline: none;
+  margin: 0;
+  border: none;
+  box-shadow: none;
+  width: 100%;
+  font-size: 18px;
+  font-family: inherit;
+}
+
+input:disabled {
+  background: transparent;
+  cursor: pointer;
+}
+
+textarea {
+  resize: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 35px;
+  background: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.input-group-big {
+  padding: 10px 20px;
+  padding-right: 60px;
+}
+
+.input-group-symbol {
+  position: absolute;
+  font-size: 36px;
+  color: #ccc;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.input-group-icon {
+  position: relative;
+  width: 100%;
+}
+
+.input-icon {
+  font-size: 24px;
+  color: #808080;
+  position: absolute;
+  line-height: 60px;
+  right: 0;
+  top: 0;
+  width: 20px;
+  background: #fff;
+  text-align: center;
+  cursor: pointer;
+
+  &::before {
+    display: block;
+    transition: all 0.4s ease;
+  }
+}
+
+.label {
+  font-size: 18px;
+  color: #333;
+  text-transform: capitalize;
+  display: block;
+  font-weight: 700;
+  white-space: nowrap;
+  margin-right: 30px;
+}
+
+.input--style {
+  font-size: 18px;
+  padding: 19px 0;
+  color: #666;
+  font-family: inherit;
+
+  &::-webkit-input-placeholder {
+    color: #ccc;
+  }
+}
+
+.input--style-small {
+  font-size: 16px;
+  padding: 20.5px 0;
+}
+
+/* ==========================================================================
+  #TAB
+  ========================================================================== */
+.tab-list {
+  list-style: none;
+  padding: 0 35px;
+  padding-top: 55px;
+
+  &::after {
+    content: '';
+    clear: both;
+    display: table;
+  }
+
+  &__item {
+    float: left;
+  }
+
+  &__link {
+    display: block;
+    text-transform: uppercase;
+    font-family: 'Poppins', 'Arial', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+    color: rgba(128, 128, 128, 0.6);
+    padding: 0 20px;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .tab-list {
+    padding: 0 10px;
+    padding-top: 40px;
+    &__link {
+      font-size: 22px;
+    }
+  }
+}
+
+.tab-list .active .tab-list__link {
+  color: #fff;
+}
+
+.tab-content > .tab-pane {
+  display: none;
+  padding: 49px 55px;
+  padding-bottom: 70px;
+}
+
+.tab-content > .tab-pane.active {
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .tab-content > .tab-pane {
+    padding: 30px;
+    padding-bottom: 45px;
+  }
+}
+
+/* ==========================================================================
+  #TITLE
+  ========================================================================== */
+.title {
+  font-size: 50px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 24px;
+}
+
+/* ==========================================================================
+  #CARD
+  ========================================================================== */
+.card {
+  background: rgba(0, 0, 0, 0.8);
+}

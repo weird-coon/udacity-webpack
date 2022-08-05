@@ -4,44 +4,76 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="https://www.udacity.com/favicon.ico?v=2" />
     <title>Evaluate a news article with Natural Language Processing</title>
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css"
+      rel="stylesheet"
+      media="all"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
+
   <body>
     <body>
-      <header>
-        <div class="">Logo</div>
-        <div class="">navigation</div>
-      </header>
+      <div class="page-wrapper bg-img p-b-120">
+        <div class="wrapper wrapper--w900">
+          <div class="card">
+            <div class="card-body">
+              <ul class="tab-list">
+                <li class="tab-list__item active">
+                  <a class="tab-list__link" href="javascript:void(0)">
+                    Sentient Analyzer
+                  </a>
+                </li>
+              </ul>
 
-      <main>
-        <section>
-          <form class="" onsubmit="return handleSubmit(event)">
-            <input
-              id="name"
-              type="text"
-              name="input"
-              value=""
-              placeholder="Name"
-            />
-            <input
-              type="submit"
-              name=""
-              value="submit"
-              onclick="return handleSubmit(event)"
-              onsubmit="return handleSubmit(event)"
-            />
-          </form>
-        </section>
+              <div class="tab-content">
+                <div class="tab-pane active" id="tab1">
+                  <form method="POST" onsubmit="return handleSubmit(event)">
+                    <div class="input-group input-group-big">
+                      <label class="label">URL:</label>
+                      <input
+                        id="name"
+                        class="input--style"
+                        type="text"
+                        name="input"
+                        placeholder="of an article, blog to discover its sentiment"
+                        required="required"
+                      />
+                      <i class="zmdi zmdi-search input-group-symbol"></i>
+                    </div>
 
-        <section>
-          <strong>Form Results:</strong>
-          <div id="results"></div>
-        </section>
-      </main>
-
-      <footer>
-        <p>This is a footer</p>
-      </footer>
+                    <div class="row row-space">
+                      <div class="col-2">
+                        <button
+                          onclick="return handleSubmit(event)"
+                          onsubmit="return handleSubmit(event)"
+                          class="btn-submit"
+                          type="submit"
+                        >
+                          Analyze
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </body>
   </body>
 </html>
