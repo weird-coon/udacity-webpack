@@ -36,7 +36,6 @@ app.post('/api', async (req, res) => {
     `https://api.meaningcloud.com/sentiment-2.1?key=${API_KEY}&model=general&lang=auto&url=${url}`,
   );
   const data = await response.json();
-  console.log('resData', data);
   const clientResults = {
     agreement: data?.agreement || 'N/A',
     sourceTag: data?.score_tag || 'N/A',
