@@ -41,16 +41,15 @@
 
               <div class="tab-content">
                 <div class="tab-pane active" id="tab1">
-                  <form method="POST" onsubmit="return handleSubmit(event)">
+                  <form onsubmit="return app.handleSubmit(event)">
                     <div class="input-group input-group-big">
                       <label class="label">URL:</label>
                       <input
-                        id="name"
+                        id="url"
                         class="input--style"
                         type="text"
                         name="input"
                         placeholder="of an article, blog to discover its sentiment"
-                        required="required"
                       />
                       <i class="zmdi zmdi-search input-group-symbol"></i>
                     </div>
@@ -58,8 +57,8 @@
                     <div class="row row-space">
                       <div class="col-2">
                         <button
-                          onclick="return handleSubmit(event)"
-                          onsubmit="return handleSubmit(event)"
+                          onclick="return app.handleSubmit(event)"
+                          onsubmit="return app.handleSubmit(event)"
                           class="btn-submit"
                           type="submit"
                         >
@@ -70,10 +69,24 @@
                   </form>
                 </div>
               </div>
+
+              <div id="response-result" class="table"></div>
             </div>
           </div>
         </div>
       </div>
+
+      <div id="loading"><span class="loader"></span></div>
+
+      <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+          // Use the window load event to keep the page load performant
+          window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/service-worker.js');
+          });
+        }
+      </script>
     </body>
   </body>
 </html>

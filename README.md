@@ -31,11 +31,19 @@ or prefer Yarn ✨
 yarn install
 ```
 
-For development mode:
+Client app in Development mode, will running on http://localhost:3001 (Webpack port config):
 
 ```bash
 yarn dev
 ```
+
+Run Server app:
+
+```bash
+yarn dev
+```
+
+Now Server app is running on http://localhost:8000
 
 Production build:
 

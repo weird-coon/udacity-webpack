@@ -8,6 +8,10 @@ module.exports = {
   mode: 'development',
   devtool: 'source-map',
   stats: 'verbose',
+  output: {
+    library: 'app',
+    libraryTarget: 'var',
+  },
   module: {
     rules: [
       {
@@ -51,6 +55,6 @@ module.exports = {
     }),
   ],
   devServer: {
-    port: 8000,
+    port: 3001,
   },
 };
