@@ -1,23 +1,34 @@
-var path = require('path');
+const bodyParser = require('body-parser');
+const cors = require('cors');
 const express = require('express');
 const mockAPIResponse = require('./mockAPI.js');
+const path = require('path');
+require('dotenv').config();
 
 const app = express();
+const PORT = 8000;
 
+/* Middleware*/
+//Here we are configuring express to use body-parser as middle-ware.
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+// Cors for cross origin allowance
+app.use(cors());
+
+// Initialize the main project folder
 app.use(express.static('dist'));
 
-console.log(__dirname);
-
-app.get('/', function (req, res) {
-  // res.sendFile('dist/index.html')
-  res.sendFile(path.resolve('src/client/views/index.html'));
+// Application API routing
+app.get('/', (req, res) => {
+  res.sendFile(path.resolve('dist/index.html'));
 });
 
-// designates what port the app will listen to for incoming requests
-app.listen(8080, function () {
-  console.log('Example app listening on port 8080!');
-});
-
-app.get('/test', function (req, res) {
+app.get('/test', (req, res) => {
   res.send(mockAPIResponse);
+});
+
+// Setting up server
+app.listen(process.env.PORT || PORT, () => {
+  console.log(`Now app is running on http://localhost:${PORT}`);
 });
