@@ -37,10 +37,10 @@ Client app in Development mode, will running on http://localhost:3001 (Webpack p
 yarn dev
 ```
 
-Run Server app:
+MUST run API Server app in development mode:
 
 ```bash
-yarn dev
+yarn start
 ```
 
 Now Server app is running on http://localhost:8000
